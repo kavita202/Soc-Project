@@ -20,8 +20,12 @@ router.get("/", async function (req, res) {
 })
 
 router.post('/', async function (req, res){
-   const task = req.body.task;
-   const newTask = await createTask(task)
+   const id = req.body.id
+   const name = req.body.name;
+   console.log(req)
+   console.log('post req received')
+
+   const newTask = await createTask(id, name)
    res.json({
      success: true,
      payload: newTask
@@ -30,8 +34,9 @@ router.post('/', async function (req, res){
 
 router.patch('/', async function (req,res){
     const id = req.body.id
-    const task = req.body.task;
-    const updatedTask = await updateTask(id, task)
+    const name = req.body.name;
+    console.log(id,name)
+    const updatedTask = await updateTask(id, name)
     res.json({
       success: true,
       payload: updatedTask

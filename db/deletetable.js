@@ -1,10 +1,10 @@
-import query from './index.js'
+// import query from './index.js'
 
-const sqlString = `DROP TABLE tasks;`
+// const sqlString = `DROP TABLE todo;`
 
-async function deleteTable() {
-    const res = await query(sqlString)
-    console.log(`Table deleted`)
-}
+// async function deleteTable() {
+//     const res = await query(sqlString)
+//     console.log(`Table deleted`)
+// }
 
-deleteTable() 
+// deleteTable() 

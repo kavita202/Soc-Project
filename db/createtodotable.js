@@ -1,8 +1,8 @@
 import query from './index.js'
 
-const sqlString = `CREATE TABLE IF NOT EXISTS todo
-(id SERIAL PRIMARY KEY,
-task TEXT,
+const sqlString = `CREATE TABLE IF NOT EXISTS tasks3
+(id VARCHAR PRIMARY KEY,
+name TEXT,
 completed BOOLEAN DEFAULT FALSE
 );`
 

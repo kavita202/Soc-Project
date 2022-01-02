@@ -7,7 +7,7 @@ import compression from 'compression';
 import router from './routes/tasks.js';
 import helmet from 'helmet';
 
-const connectionstring = "postgres://clhitcgcbvtcnd:de1a70d2337fe6c30c432808b64a070a17353dd05034e1171d6a9bb7d1b805b2@ec2-54-229-68-88.eu-west-1.compute.amazonaws.com:5432/d404vmp998b4h9"
+const dev_db_url = "postgres://clhitcgcbvtcnd:de1a70d2337fe6c30c432808b64a070a17353dd05034e1171d6a9bb7d1b805b2@ec2-54-229-68-88.eu-west-1.compute.amazonaws.com:5432/d404vmp998b4h9"
 
 const connectionstring = process.env.HerokuDB_URI || dev_db_url; 
 const app = express();

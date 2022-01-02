@@ -7,7 +7,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start":"-r dotenv/config ./bin/www.js",
+    "start":"node -r dotenv/config ./bin/www.js",
     "dev":"nodemon -r dotenv/config ./bin/www.js",
     "dbcreateToDoTable":"node -r dotenv/config ./db/createtodotable.js",
     "populateTable":"node -r dotenv/config ./db/populatetable.js"

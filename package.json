@@ -1,6 +1,9 @@
 {
   "name": "soc-project",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.13.1"
+  },
   "private": true,
   "type": "module",
   "scripts": {

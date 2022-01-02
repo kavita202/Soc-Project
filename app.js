@@ -21,8 +21,17 @@ app.use(cookieParser());
 app.use(compression())
 app.use(helmet())
 // app.use('/tasks', router);
+app.use(function (req, res) {
+  res.status(404).json({message: "We couldn't find what you were looking for 😞"})
+})
 
-app.get("/", async function (req, res) {
+app.get('/',async function (req, res) {
+  res.json('recieved') 
+});
+
+
+
+app.get("/tasks", async function (req, res) {
   const search = req.query.search
   if (search) {
   const found = await searchTasks(search)
@@ -71,8 +80,5 @@ app.delete('/:id', async function (req, res) {
 
 
 
-app.use(function (req, res) {
-  res.status(404).json({message: "We couldn't find what you were looking for 😞"})
-})
 
 export default app

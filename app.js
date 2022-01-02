@@ -3,9 +3,9 @@ import path from 'path';
 import cookieParser  from 'cookie-parser';
 import cors  from 'cors';
 import logger  from 'morgan';
-
+import compression from 'compression';
 import router from './routes/tasks.js';
-
+import helmet from 'helmet';
 const app = express();
 
 app.use(logger('dev'));
@@ -13,8 +13,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-
+app.use(compression())
+app.use(helmet())
 app.use('/tasks', router);
 
 app.use(function (req, res, next) {

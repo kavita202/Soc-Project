@@ -21,9 +21,16 @@ app.use(compression())
 app.use(helmet())
 app.use('/tasks', router);
 
-app.use(function (req, res, next) {
-  res.status(404).json({message: "We couldn't find what you were looking for 😞"})
+app.get("/", async function (req, res) {
+  res.json ({
+    success: true,
+    payload: 'Your request has been recieved'
+  })
 })
 
 
-export default app;
+app.use(function (req, res) {
+  res.status(404).json({message: "We couldn't find what you were looking for 😞"})
+})
+
+export default app

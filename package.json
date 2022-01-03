@@ -7,10 +7,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start":"node -r dotenv/config ./bin/www.js",
-    "dev":"nodemon -r dotenv/config ./bin/www.js",
-    "dbcreateToDoTable":"node -r dotenv/config ./db/createtodotable.js",
-    "populateTable":"node -r dotenv/config ./db/populatetable.js"
+    "start": "node -r dotenv/config ./bin/www.js",
+    "dev": "nodemon -r dotenv/config ./bin/www.js",
+    "dbcreateToDoTable": "node -r dotenv/config ./db/createtodotable.js",
+    "populateTable": "node -r dotenv/config ./db/populatetable.js"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -19,6 +19,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "helmet": "^4.6.0",
+    "moment": "^2.29.1",
     "morgan": "~1.9.1",
     "pg": "^8.7.1"
   },

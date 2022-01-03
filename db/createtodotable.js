@@ -1,9 +1,10 @@
 import query from './index.js'
-
+import moment from 'moment'
 const sqlString = `CREATE TABLE IF NOT EXISTS tasks3
 (id VARCHAR PRIMARY KEY,
 name TEXT,
-completed BOOLEAN DEFAULT FALSE
+completed BOOLEAN DEFAULT FALSE,
+deadline DATE NOT NULL DEFAULT CURRENT_DATE 
 );`
 
 async function createTaskTable() {

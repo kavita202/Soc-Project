@@ -4,7 +4,8 @@ const sqlString = `CREATE TABLE IF NOT EXISTS tasks3
 (id VARCHAR PRIMARY KEY,
 name TEXT,
 completed BOOLEAN DEFAULT FALSE,
-deadline DATE NOT NULL DEFAULT CURRENT_DATE 
+deadline DATE NOT NULL DEFAULT CURRENT_DATE,
+description text DEFAULT NULL
 );`
 
 async function createTaskTable() {
